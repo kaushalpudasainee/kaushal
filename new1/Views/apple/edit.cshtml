@@ -1,0 +1,28 @@
+﻿@model new1.Models.record1
+
+
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>create</h2>
+@using (Html.BeginForm("UpdateData", "apple"))
+{
+<input type="hidden" name="id" class="form-ciontrol" value="@(Model.id)" />
+
+
+<label class="col-md-2">Name</label>
+<div class="col-md-4">
+    <input type="text" name="name" class="form-control" value="@(Model.name)" />
+</div>
+
+<label class="col-md-2">Address</label>
+<div class="col-md-4">
+    <input type="text" name="address" class="form-control" value="@(Model.address)" />
+</div>
+
+<input type="submit" name="submit" class="submitButton" />
+
+}
+

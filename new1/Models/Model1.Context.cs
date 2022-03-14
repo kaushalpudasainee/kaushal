@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace new1.Views
+namespace new1.Models
 {
     using System;
     using System.Data.Entity;
