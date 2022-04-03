@@ -4,9 +4,18 @@
     <EntitySetMapping Name="record1">
       <EntityTypeMapping TypeName="catModel.record1">
         <MappingFragment StoreEntitySet="record1">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="record2">
+      <EntityTypeMapping TypeName="catModel.record2">
+        <MappingFragment StoreEntitySet="record2">
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="catModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="catEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="record1" EntityType="catModel.record1" />
+    <EntitySet Name="record2" EntityType="catModel.record2" />
+  </EntityContainer>
   <EntityType Name="record1">
     <Key>
       <PropertyRef Name="id" />
@@ -8,7 +12,12 @@
     <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="address" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityContainer Name="catEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="record1" EntityType="Self.record1" />
-  </EntityContainer>
+  <EntityType Name="record2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="address" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

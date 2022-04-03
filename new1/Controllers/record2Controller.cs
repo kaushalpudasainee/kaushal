@@ -7,38 +7,38 @@ using new1.Models;
 
 namespace new1.Controllers
 {
-    public class appleController : Controller
+    public class record2Controller : Controller
     {
         catEntities db = new catEntities();
 
-        // GET: apple
-        public ActionResult kaushal()
-        {
-            List<record1> all_data = db.record1.ToList();
-            return View(all_data);
-        }
-        public ActionResult Create()
+        // GET: record2
+        public ActionResult Index()
         {
             return View();
         }
-        public ActionResult SaveData(record1 record1)
+        public ActionResult Create()
+        {
+            List<record2> all_data = db.record2.ToList();
+            return View();
+        }
+        public ActionResult SaveData(new1.Models.record2 record2)
 
         {
-            db.record1.Add(record1);
+            db.record2.Add(record2);
             db.SaveChanges();
             return RedirectToAction("kaushal");
         }
         public ActionResult Edit(int id)
         {
-            record1 data = db.record1.Find(id);
-            //record1 data = db.employee.FirstorDefault(x=)
+            record2 data = db.record2.Find(id);
+            //record2 data = db.employee.FirstorDefault(x=)
             return View(data);
         }
-        public ActionResult UpdateData(record1 record1)
+        public ActionResult UpdateData(record2 record2)
         {
-            record1 update = db.record1.Find(record1.id);
-            update.name = record1.name;
-            update.address = record1.address;
+            record1 update = db.record1.Find(record2.id);
+            update.name = record2.name;
+            update.address = record2.address;
             db.Entry(update).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("kaushal");
@@ -47,6 +47,3 @@ namespace new1.Controllers
 
     }
 }
-
-
-    

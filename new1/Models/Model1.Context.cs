@@ -26,5 +26,6 @@ namespace new1.Models
         }
     
         public virtual DbSet<record1> record1 { get; set; }
+        public virtual DbSet<record2> record2 { get; set; }
     }
 }

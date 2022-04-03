@@ -8,7 +8,16 @@
     <Property Name="name" Type="varchar" MaxLength="20" />
     <Property Name="address" Type="varchar" MaxLength="20" />
   </EntityType>
+  <EntityType Name="record2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="30" />
+    <Property Name="address" Type="varchar" MaxLength="30" />
+  </EntityType>
   <EntityContainer Name="catModelStoreContainer">
     <EntitySet Name="record1" EntityType="Self.record1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="record2" EntityType="Self.record2" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

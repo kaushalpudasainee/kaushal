@@ -5,7 +5,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a4e5057d16d049a2a19b6f6393faafc4" Name="Diagram1">
-        <EntityTypeShape EntityType="catModel.record1" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="catModel.record1" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="catModel.record2" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
